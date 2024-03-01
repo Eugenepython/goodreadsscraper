@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review Scraper</title>
+</head>
+<body>
+    <h1>Book Review Scraper</h1>
+    <form action="/scrape" method="post">
+        <label for="book_url">Enter Book URL:</label>
+        <input type="text" id="book_url" name="book_url" required>
+        <button type="submit">Scrape Reviews</button>
+    </form>
+    {% if reviews %}
+        <h2>Reviews:</h2>
+        <div width="800px">{{ reviews }}</div>
+    
+    {% endif %}
+</body>
+</html>
